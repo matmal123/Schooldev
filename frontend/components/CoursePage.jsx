@@ -7,6 +7,7 @@ import outIcon from '@public/out.svg';
 import logoIcon from '@public/logo.svg'
 import logoLightIcon from '@public/logo-light.svg'
 import '@styles/App.css';
+import '@styles/CoursePage.css';
 
 function CoursePage({ user, onLogout }) {
     const { theme, toggleTheme } = useTheme();
@@ -37,7 +38,7 @@ function CoursePage({ user, onLogout }) {
         },
         2: {
             id: 2,
-            title: "JavaScript Мастер",
+            title: "Unity",
             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
             description: "Углубленный курс по современному JavaScript: асинхронность, замыкания, прототипы, промисы и новые возможности ES2024.",
             fullDescription: "Продвинутый курс по JavaScript, который превратит вас в эксперта. Изучите замыкания, прототипное наследование, асинхронное программирование, промисы, async/await и все новые возможности ES2024.",
@@ -51,8 +52,40 @@ function CoursePage({ user, onLogout }) {
                 "ES2024 новые возможности",
                 "Практический проект"
             ]
-        }
+        },
         // Добавьте остальные курсы по аналогии
+
+        3: {
+            id: 3,
+            title: "Python",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+            description: "Углубленный курс по современному JavaScript: асинхронность, замыкания, прототипы, промисы и новые возможности ES2024.",
+            fullDescription: "Продвинутый курс по JavaScript, который превратит вас в эксперта. Изучите замыкания, прототипное наследование, асинхронное программирование, промисы, async/await и все новые возможности ES2024.",
+            lessons: [
+                "Замыкания и область видимости",
+                "Прототипы и наследование",
+                "Асинхронность: Callbacks",
+                "Промисы",
+                "Async/Await",
+                "Event Loop",
+                "ES2024 новые возможности",
+                "Практический проект"
+            ]
+        },
+
+        4: {
+            id: 4,
+            title: "Создание сайтов",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMHHyZWPBs1CzVhIL-aOz38IWCihbh9tpQM-Td1271iw&s=10",
+            description: "Практический курс по созданию сайтов с нуля: освоите HTML, CSS и JavaScript",
+            fullDescription: "Практический курс по созданию сайтов с нуля: освоите HTML, CSS и JavaScript.",
+            lessons: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Практический проект"
+            ]
+        },
     };
     
     useEffect(() => {
@@ -132,7 +165,7 @@ function CoursePage({ user, onLogout }) {
                 </div>
             </header>
             
-            <div className='course-card margin-top-course-page pointer-off'>
+            <div className='course-page margin-top-course-page pointer-off'>
                     <h1 className="course-title course-title-course-page ">{course.title}</h1>
                     <img 
                         className='margin-top-course-page'

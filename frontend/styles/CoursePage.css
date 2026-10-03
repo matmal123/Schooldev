@@ -1,0 +1,23 @@
+.course-page{
+  padding: 20px 300px 20px 300px;
+}
+        /* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+  .course-page {
+    padding: 20px 80px;
+  }
+}
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+  .course-page {
+    padding: 15px 20px;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .course-page {
+    padding: 10px 15px;
+  }
+}

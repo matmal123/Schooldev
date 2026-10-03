@@ -6,7 +6,6 @@ const cors = require('cors');
 
 const app = express();
 
-
 app.use(cors({
     origin: 'http://localhost:5173',  // адрес вашего фронтенда
     credentials: true
@@ -18,9 +17,9 @@ app.use(express.json());
 
 const pool = new Pool({
     user: 'postgres',
-    host: 'postgres',
-    database: 'duo_you',
-    password: '1234',
+    host: 'localhost',
+    database: 'Duo_app',
+    password: 'Otc197777',
     port: 5432,
 });
 

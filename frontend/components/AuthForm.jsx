@@ -53,7 +53,7 @@ function AuthForm({ onLogin }) {
             <div className="auth-card">
                 <div className="auth-header">
                     <h2 className="auth-title">
-                        {isLogin ? 'Добро пожаловать' : 'Создать аккаунт'}
+                        {isLogin ? 'Добро пожаловать!' : 'Создать аккаунт'}
                     </h2>
                     <p className="auth-subtitle">
                         {isLogin ? 'Войдите, чтобы продолжить' : 'Зарегистрируйтесь для начала работы'}
