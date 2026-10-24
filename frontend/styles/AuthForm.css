@@ -110,15 +110,15 @@
 
 .forgot-link {
   font-size: 13px;
-  color: #1b45ff;
+  color: #5a35d3;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.forgot-link:hover { color: #45a049; text-decoration: underline; }
+.forgot-link:hover { color: rgb(69, 20, 228); text-decoration: underline; }
 
 .submit-btn {
-  background: linear-gradient(135deg, #1b45ff, #011a88);
+  background: linear-gradient(135deg, #5a35d3, rgb(72, 24, 231));
   color: #fff;
   padding: 14px;
   font-size: 16px;
@@ -142,19 +142,24 @@
 .switch-mode-btn {
   background: none;
   border: none;
-  color: #1b45ff;
+  color: #6541D9;
   font-size: 14px;
   cursor: pointer;
   padding: 8px 16px;
   transition: all 0.3s ease;
 }
 
-.switch-mode-btn:hover { color: #45a049; text-decoration: underline; }
+.switch-mode-btn:hover { color: #5a35d3; text-decoration: underline; }
 
 [data-theme="dark"] .auth-card { background: #1e1e1e; }
 [data-theme="dark"] .auth-input { background: #2d2d2d; border-color: #3d3d3d; }
 [data-theme="dark"] .error-alert { background: #3d1f1f; }
 [data-theme="dark"] .error-text { color: #ff8a8a; }
+
+[data-theme="dark"] .submit-btn { background: #250885; }
+[data-theme="dark"] .forgot-link {color: #220483; border-color: #3d3d3d; }
+[data-theme="dark"] .switch-mode-btn { color: #220483; border-color: #3d3d3d }
+
 
 @media (max-width: 768px) {
   .auth-card { padding: 32px 24px; border-radius: 20px; }
@@ -172,3 +177,7 @@
   .input-label { font-size: 13px; }
   .switch-mode-btn { font-size: 13px; }
 }
+
+
+
+
