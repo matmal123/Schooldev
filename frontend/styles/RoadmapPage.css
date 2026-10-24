@@ -1,118 +1,194 @@
-/* RoadmapPage.css — адаптив для мобильных */
-.roadmap-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+/* ============================================================
+   RoadmapPage.css
+   ============================================================ */
+
+.roadmap-page-container {
+  --roadmap-surface: rgba(255, 255, 255, 0.88);
+  --roadmap-text: #21153d;
+  --roadmap-muted: #79708f;
+  --roadmap-border: rgba(100, 76, 170, 0.18);
+  --roadmap-accent: #6541d9;
+  --roadmap-accent-soft: rgba(101, 65, 217, 0.1);
+
+  width: 100%;
   min-height: 100vh;
-  margin-top: 3rem;
+  margin: 0;
+  color: var(--roadmap-text);
+
+  background:
+    radial-gradient(ellipse 75% 90% at 0% 50%,
+      rgba(93, 126, 255, 0.22) 0%, rgba(93, 126, 255, 0.08) 40%, transparent 75%),
+    radial-gradient(ellipse 75% 90% at 100% 50%,
+      rgba(113, 137, 255, 0.22) 0%, rgba(113, 137, 255, 0.08) 40%, transparent 75%),
+    linear-gradient(120deg, #dce7ff 0%, #e8e2ff 50%, #dce7ff 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
-/* Заголовок страницы — меньше на мобильных */
-.roadmap-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
+[data-theme="dark"] .roadmap-page-container {
+  --roadmap-surface: rgba(30, 20, 52, 0.88);
+  --roadmap-text: #f5f0ff;
+  --roadmap-muted: #b2a5d0;
+  --roadmap-border: rgba(174, 145, 255, 0.18);
+  --roadmap-accent: #a78bfa;
+  --roadmap-accent-soft: rgba(139, 92, 246, 0.16);
+
+  background-color: #10091f;
+  background-image:
+    radial-gradient(ellipse 75% 100% at 0% 50%,
+      rgba(39, 100, 230, 0.48) 0%, rgba(39, 100, 230, 0.2) 38%, transparent 75%),
+    radial-gradient(ellipse 75% 100% at 100% 50%,
+      rgba(45, 110, 245, 0.45) 0%, rgba(45, 110, 245, 0.18) 38%, transparent 75%),
+    radial-gradient(ellipse 65% 65% at 50% 0%,
+      rgba(113, 55, 195, 0.25) 0%, transparent 75%),
+    linear-gradient(90deg,
+      #111b3a 0%, #17102d 24%, #190f30 50%, #17102d 76%, #111b3a 100%);
 }
 
-.roadmap-title {
-  padding-bottom: 2%;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  background: linear-gradient(135deg, #2c7da0, #61dafb);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.roadmap-page-container .dashboard-header {
+  background: var(--roadmap-surface);
+  border-radius: 0;
+  border-bottom: 1px solid var(--roadmap-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
-.roadmap-subtitle {
-  font-size: 0.8rem;
-  opacity: 0.75;
-  padding: 0 0.5rem;
+.roadmap-page-container .header-content {
+  max-width: 1440px;
+  min-height: 76px;
+  padding: 0 32px;
 }
 
-/* Сетка карточек — одна колонка на мобильных, две на планшетах */
-.chapters-grid {
+.roadmap-page {
+  width: 100%;
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 64px 32px 40px;
+}
+
+.roadmap-page .roadmap-header {
+  margin-bottom: 42px;
+  padding: 34px 0 12px;
+  animation: roadmapFadeIn 0.55s ease both;
+}
+
+.roadmap-page .roadmap-title {
+  max-width: 850px;
+  margin: 0 0 16px;
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  color: var(--roadmap-text);
+  overflow-wrap: anywhere;
+}
+
+.roadmap-page .roadmap-subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: var(--roadmap-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.roadmap-page .chapters-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
 }
 
-/* Планшеты (от 600px) */
-@media (min-width: 600px) {
-  .roadmap-page {
-    padding: 1.5rem;
-  }
-  
-  .chapters-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .roadmap-title {
-    font-size: 1.9rem;
-  }
+.roadmap-page .chapters-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  animation: roadmapFadeIn 0.5s ease both;
 }
 
-/* Десктоп (от 1000px) */
-@media (min-width: 1000px) {
-  .roadmap-page {
-    padding: 2rem 1.5rem;
-  }
-  
-  .chapters-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .roadmap-title {
-    font-size: 2.2rem;
-  }
-}
+.roadmap-page .chapters-grid > *:nth-child(2) { animation-delay: 0.06s; }
+.roadmap-page .chapters-grid > *:nth-child(3) { animation-delay: 0.12s; }
+.roadmap-page .chapters-grid > *:nth-child(4) { animation-delay: 0.18s; }
+.roadmap-page .chapters-grid > *:nth-child(5) { animation-delay: 0.24s; }
 
-/* Футер страницы — стек на мобильных */
-.roadmap-footer {
+.roadmap-page .roadmap-footer {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  padding-top: 1.5rem;
-  margin-top: 0.5rem;
-  border-top: 1px solid;
-  font-size: 0.7rem;
-  opacity: 0.7;
+  gap: 12px;
+  margin-top: 30px;
 }
 
-.roadmap-footer span {
-  padding: 0.25rem 0.5rem;
+.roadmap-page .roadmap-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  color: var(--roadmap-muted);
+  background: var(--roadmap-surface);
+  border: 1px solid var(--roadmap-border);
+  border-radius: 12px;
+  font-size: 13px;
 }
 
-/* ===== ТЁМНАЯ И СВЕТЛАЯ ТЕМА ===== */
-
-/* Светлая тема (по умолчанию) */
-[data-theme="light"] .roadmap-page {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9eef3 100%);
+.roadmap-loading,
+.roadmap-error {
+  min-height: 100vh;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: var(--text);
+  background: var(--bg);
+  text-align: center;
 }
 
-[data-theme="light"] .roadmap-subtitle {
-  color: #2c6e8f;
+.roadmap-error button {
+  padding: 12px 20px;
+  color: #fff;
+  background: #6541d9;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-[data-theme="light"] .roadmap-footer {
-  border-top-color: #cbdde6;
-  color: #5a7e91;
+.roadmap-error button:hover {
+  background: #5030bd;
+  transform: translateY(-2px);
 }
 
-/* Тёмная тема */
-[data-theme="dark"] .roadmap-page {
-  background: #212121;
+@keyframes roadmapFadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-[data-theme="dark"] .roadmap-subtitle {
-  color: #8db4c9;
-}
+@media (max-width: 760px) {
+  .roadmap-page-container .header-content {
+    min-height: 66px;
+    padding: 0 16px;
+  }
 
-[data-theme="dark"] .roadmap-footer {
-  border-top-color: #2a3a48;
-  color: #7a99ab;
+  .roadmap-page-container .logo-btn { font-size: 17px; }
+
+  .roadmap-page { padding: 30px 16px; }
+
+  .roadmap-page .roadmap-header { margin-bottom: 26px; padding-top: 18px; }
+
+  .roadmap-page .roadmap-title {
+    font-size: clamp(30px, 8vw, 42px);
+    letter-spacing: -1.2px;
+  }
+
+  .roadmap-page .roadmap-subtitle { font-size: 14px; }
+
+  .roadmap-page .chapters-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .roadmap-page .roadmap-footer { flex-direction: column; }
 }
