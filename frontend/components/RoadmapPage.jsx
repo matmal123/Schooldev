@@ -135,7 +135,69 @@ const roadmapsData = {
         ]
       }
     ]
-  }
+  },
+  4: { // Создание сайтов
+    id: 4,
+    title: "🌐 Создание сайтов Roadmap",
+    description: "Путь от новичка до уверенного веб-разработчика · главы с подтемами и ответвлениями",
+    chapters: [
+      {
+        id: 1,
+        number: 'Глава 1',
+        title: 'Основы HTML',
+        description: 'Теги, структура документа, семантика — база вёрстки.',
+        subsections: ['📦 Основные теги', '🔁 Списки и таблицы', '🎯 Формы', '📚 Семантические теги'],
+        branches: [
+          { name: 'HTML5 API', desc: 'Новые возможности HTML5' },
+          { name: 'Мета-теги', desc: 'SEO и соцсети' }
+        ]
+      },
+      {
+        id: 2,
+        number: 'Глава 2',
+        title: 'CSS и вёрстка',
+        description: 'Селекторы, блочная модель, Flexbox, Grid — учимся стилизовать.',
+        subsections: ['🎨 Селекторы и свойства', '📐 Блочная модель', '🧩 Flexbox', '🔲 CSS Grid'],
+        branches: [
+          { name: 'Анимации', desc: 'Transition и keyframes' },
+          { name: 'Препроцессоры', desc: 'Sass и SCSS' }
+        ]
+      },
+      {
+        id: 3,
+        number: 'Глава 3',
+        title: 'Адаптивность',
+        description: 'Media queries, mobile-first, отзывчивые изображения.',
+        subsections: ['📱 Media queries', '🌐 Mobile-first', '🖼️ Отзывчивые изображения', '🎯 Viewport'],
+        branches: [
+          { name: 'Container queries', desc: 'Адаптивность по контейнеру' },
+          { name: 'CSS clamp()', desc: 'Плавная типографика' }
+        ]
+      },
+      {
+        id: 4,
+        number: 'Глава 4',
+        title: 'JavaScript на сайте',
+        description: 'DOM, события, интерактивность, работа с формами.',
+        subsections: ['🧬 DOM-дерево', '🖱️ События', '🔒 Работа с формами', '🎨 Динамические стили'],
+        branches: [
+          { name: 'LocalStorage', desc: 'Хранение данных в браузере' },
+          { name: 'Fetch API', desc: 'Загрузка данных без перезагрузки' }
+        ]
+      },
+      {
+        id: 5,
+        number: 'Глава 5',
+        title: 'Инструменты и деплой',
+        description: 'Git, сборка, хостинг, публикация сайта.',
+        subsections: ['📦 Git и GitHub', '🔧 Сборщики', '⚡ Хостинг и домен', '🎯 Оптимизация'],
+        branches: [
+          { name: 'Vite', desc: 'Быстрый старт проекта' },
+          { name: 'Netlify / Vercel', desc: 'Деплой в один клик' }
+        ]
+      }
+    ]
+  },
 };
 
 function RoadmapPage({ user, onLogout }) {
@@ -178,7 +240,7 @@ function RoadmapPage({ user, onLogout }) {
   }
 
   return (
-    <div className="roadmap-page-container">
+    <div className={`course-${courseId}`}>
       {/* Header - такой же как в CoursePage для единообразия */}
       <header className="dashboard-header">
         <div className="header-content">
@@ -206,7 +268,7 @@ function RoadmapPage({ user, onLogout }) {
 
         <div className="chapters-grid">
           {roadmap.chapters.map(chapter => (
-            <ChapterCard key={chapter.id} chapter={chapter} />
+            <ChapterCard key={chapter.id} chapter={chapter} pageId = {courseId} />
           ))}
         </div>
 

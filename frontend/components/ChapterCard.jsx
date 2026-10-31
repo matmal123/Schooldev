@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '@styles/ChapterCard.css';
 import { useNavigate } from 'react-router-dom';
 
-const ChapterCard = ({ chapter }) => {
+const ChapterCard = ({ chapter, pageId }) => {
    const navigate = useNavigate();
   const [isBranchOpen, setIsBranchOpen] = useState(false);
   const { number, title, description, subsections, branches } = chapter;
@@ -13,7 +13,7 @@ const ChapterCard = ({ chapter }) => {
   };
 
   return (
-    <div className="chapter-card" onClick={handleQuiz1}>
+    <div className={`chapter-card-${pageId}`} onClick={handleQuiz1}>
       <div className="card-header">
         <span className="chapter-number">{number}</span>
         <h3 className="chapter-title">{title}</h3>
