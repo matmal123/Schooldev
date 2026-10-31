@@ -105,7 +105,7 @@
 .btn-3 { background: #3776ab; }
 
 .lesson-number.course-4,
-.btn-4 { background: #e44d26; }
+.btn-4 { background: #d55500; }
 
 .lesson-number.course-5 { background: #478cbf; }
 
@@ -144,7 +144,7 @@
   justify-content: center;
   font-size: 1.5rem;
   color: #fff;
-  box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 10px 20px rgba(126, 63, 0, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -159,14 +159,14 @@
 .btn-lesson.course-1 { background: #087ea4; }
 .btn-lesson.course-2 { background: #222c37; }
 .btn-lesson.course-3 { background: #3776ab; }
-.btn-lesson.course-4 { background: #e44d26; }
+.btn-lesson.course-4 { background: #fa6800; }
 .btn-lesson.course-5 { background: #478cbf; }
 .btn-lesson.course-6 { background: #f05033; }
 
 .btn-1-wrapper .btn-1 { background: #087ea4; }
 .btn-2-wrapper .btn-2 { background: #222c37; }
 .btn-3-wrapper .btn-3 { background: #3776ab; }
-.btn-4-wrapper .btn-4 { background: #e44d26; }
+.btn-4-wrapper .btn-4 { background: #ff7300; }
 
 .btn-lesson-text,
 .btn-1-text,
@@ -244,6 +244,35 @@
 }
 
 .circle-1:active {
+  transform: scale(0.97);
+}
+/* ---------- circle-4 ---------- */
+
+.circle-4 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e77700 0%, #d55c00 100%);
+  box-shadow: 0 6px 18px rgba(250, 112, 0, 0.473);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.circle-4:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(182, 85, 0, 0.55);
+}
+
+.circle-4:active {
   transform: scale(0.97);
 }
 
