@@ -37,40 +37,81 @@
   margin-bottom: 30px;
 }
 
-.lesson-list {
+/* ---------- Список уроков ---------- */
+
+.lesson-list,
+.ul-course-page,
+.course-page ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
 }
 
-.lesson-list li {
-  padding: 10px;
-  margin: 10px 0;
-  background-color: var(--surface-2);
-  border-radius: var(--radius-sm);
+.lesson-list li,
+.ul-course-page li,
+.course-page ul li {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  background-color: var(--surface-2);
+  border-radius: var(--radius-sm);
   color: var(--text);
+  text-align: left;
 }
 
-.lesson-number {
+/* ---------- Кружки с номерами уроков ---------- */
+
+.lesson-number,
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   color: #fff;
   border-radius: 50%;
   margin-right: 10px;
   font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1;
   flex-shrink: 0;
+  flex-grow: 0;
+  vertical-align: middle;
 }
 
-.lesson-number.course-1 { background: #e34a1f; }
-.lesson-number.course-2 { background: #222c37; }
-.lesson-number.course-3 { background: #3776ab; }
-.lesson-number.course-4 { background: #e44d26; }
+/* Цвета под курсы */
+.lesson-number.course-1,
+.btn-1 { background: #087ea4; }
+
+.lesson-number.course-2,
+.btn-2 { background: #222c37; }
+
+.lesson-number.course-3,
+.btn-3 { background: #3776ab; }
+
+.lesson-number.course-4,
+.btn-4 { background: #e44d26; }
+
 .lesson-number.course-5 { background: #478cbf; }
+
 .lesson-number.course-6 { background: #f05033; }
+
+/* ---------- Большая кнопка «К первому уроку» ---------- */
 
 .button-area {
   display: flex;
@@ -78,13 +119,21 @@
   margin-top: 2rem;
 }
 
-.btn-lesson-wrapper {
+.btn-lesson-wrapper,
+.btn-1-wrapper,
+.btn-2-wrapper,
+.btn-3-wrapper,
+.btn-4-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.btn-lesson {
+.btn-lesson,
+.btn-1-wrapper .btn-1,
+.btn-2-wrapper .btn-2,
+.btn-3-wrapper .btn-3,
+.btn-4-wrapper .btn-4 {
   width: 60px;
   height: 60px;
   border-radius: 60px;
@@ -99,16 +148,31 @@
   transition: all 0.3s ease;
 }
 
-.btn-lesson:hover { transform: scale(1.05); }
+.btn-lesson:hover,
+.btn-1-wrapper .btn-1:hover,
+.btn-2-wrapper .btn-2:hover,
+.btn-3-wrapper .btn-3:hover,
+.btn-4-wrapper .btn-4:hover {
+  transform: scale(1.05);
+}
 
-.btn-lesson.course-1 { background: #e34a1f; }
+.btn-lesson.course-1 { background: #087ea4; }
 .btn-lesson.course-2 { background: #222c37; }
 .btn-lesson.course-3 { background: #3776ab; }
 .btn-lesson.course-4 { background: #e44d26; }
 .btn-lesson.course-5 { background: #478cbf; }
 .btn-lesson.course-6 { background: #f05033; }
 
-.btn-lesson-text {
+.btn-1-wrapper .btn-1 { background: #087ea4; }
+.btn-2-wrapper .btn-2 { background: #222c37; }
+.btn-3-wrapper .btn-3 { background: #3776ab; }
+.btn-4-wrapper .btn-4 { background: #e44d26; }
+
+.btn-lesson-text,
+.btn-1-text,
+.btn-2-text,
+.btn-3-text,
+.btn-4-text {
   position: absolute;
   right: 70px;
   top: 50%;
@@ -125,10 +189,16 @@
   transition: opacity 0.2s, transform 0.2s;
 }
 
-.btn-lesson-wrapper:hover .btn-lesson-text {
+.btn-lesson-wrapper:hover .btn-lesson-text,
+.btn-1-wrapper:hover .btn-1-text,
+.btn-2-wrapper:hover .btn-2-text,
+.btn-3-wrapper:hover .btn-3-text,
+.btn-4-wrapper:hover .btn-4-text {
   opacity: 1;
   transform: translateY(-50%) translateX(-8px);
 }
+
+/* ---------- Состояния загрузки / «курс не найден» ---------- */
 
 .course-page-state {
   text-align: center;
@@ -147,6 +217,38 @@
   font-size: 1rem;
 }
 
+/* ---------- circle-1 ---------- */
+
+.circle-1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4facfe 0%, #00c6ff 100%);
+  box-shadow: 0 6px 18px rgba(0, 198, 255, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.circle-1:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 198, 255, 0.55);
+}
+
+.circle-1:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Адаптив ---------- */
+
 @media (max-width: 1024px) {
   .course-page { padding: 0 20px; }
 }
@@ -155,5 +257,27 @@
   .course-page { padding: 0 10px; margin-top: 20px; }
   .course-page-title { font-size: 1.5rem; }
   .course-page-image { max-height: 200px; }
-  .btn-lesson { width: 50px; height: 50px; font-size: 1.2rem; }
+
+  .btn-lesson,
+  .btn-1-wrapper .btn-1,
+  .btn-2-wrapper .btn-2,
+  .btn-3-wrapper .btn-3,
+  .btn-4-wrapper .btn-4 {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ---------- Глобальный сброс для ul ---------- */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+  margin-left: 0;
 }

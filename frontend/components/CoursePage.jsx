@@ -181,7 +181,7 @@ function CoursePage({ user, onLogout }) {
                     <ul className='ul-course-page'>
                         {course.lessons.map((lesson, index) => (
                             <li key={index}>
-                                <span className={course.id === 1 ? "circle-1" : course.id === 2 ? "circle-2" : "nnn"} style={{
+                                <span className={`circle-${course.id}`} style={{
                                     display: 'inline-block',
                                     width: '30px',
                                     height: '30px',
@@ -197,9 +197,9 @@ function CoursePage({ user, onLogout }) {
                     </ul>
                 </div>
                 <div className="button-area">
-                    <div className={course.id === 1 ? "btn-1-wrapper" : course.id === 2 ? "btn-2-wrapper" : "nnn"}>
-                        <button className={course.id === 1 ? "btn-1" : course.id === 2 ? "btn-2" : "nnn"} onClick={() => handleLessons(course.id)}>▶</button>
-                        <div className={course.id === 1 ? "btn-1-text" : course.id === 2 ? "btn-2-text" : "nnn"}>К первому уроку →</div>
+                    <div className={`btn-${course.id}-wrapper`}>
+                        <button className={`btn-${course.id}`} onClick={() => handleLessons(course.id)}>▶</button>
+                        <div className={`btn-${course.id}-text`}>К первому уроку →</div>
                     </div>
                 </div>
         </div>
