@@ -13,7 +13,7 @@ const ChapterCard = ({ chapter, pageId }) => {
   };
 
   return (
-    <div className={`chapter-card-${pageId}`} onClick={handleQuiz1}>
+    <div className={`chapter-card chapter-card-${pageId}`} onClick={handleQuiz1}>
       <div className="card-header">
         <span className="chapter-number">{number}</span>
         <h3 className="chapter-title">{title}</h3>

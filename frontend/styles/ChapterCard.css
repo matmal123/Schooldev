@@ -3,20 +3,13 @@
    ============================================================ */
 
 .chapter-card {
-  border-radius: 1.2rem;
+  border: 1px solid #033b56;
+  border-radius: 50px;
   padding: 1.2rem;
   transition: all 0.2s ease;
   position: relative;
+  box-sizing: border-box;
   overflow: hidden;
-}
-
-.chapter-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 3px;
-  background: linear-gradient(90deg, #8b5cf6, #6366f1, #60a5fa, transparent);
-  opacity: 0.9;
 }
 
 @media (hover: hover) {
@@ -143,19 +136,19 @@
   word-break: break-word;
 }
 
-/* Светлая тема */
+/* ============================================================
+   Светлая тема
+   ============================================================ */
 [data-theme="light"] .chapter-card,
 :root:not([data-theme="dark"]) .chapter-card {
   background: #ffffff;
-  border: 1px solid #e2edf4;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid #033b56;
 }
 
 @media (hover: hover) {
   [data-theme="light"] .chapter-card:hover,
   :root:not([data-theme="dark"]) .chapter-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    border-color: #c5dce8;
+    border-color: #0a5a7f;
   }
 }
 
@@ -209,17 +202,22 @@
   color: #568292;
 }
 
-/* Тёмная тема */
-[data-theme="dark"] .chapter-card {
+/* ============================================================
+   Тёмная тема
+   ============================================================ */
+
+
+/* ============================================================
+   Цвет для карточек для тёмной темы
+   ============================================================ */
+   [data-theme="dark"] .chapter-card {
   background: #1e1e2e;
-  border: 1px solid #3f3f5a;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #8b5cf6;
 }
 
 @media (hover: hover) {
   [data-theme="dark"] .chapter-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-color: #5a5a8a;
+    border-color: #a78bfa;
   }
 }
 
@@ -253,13 +251,47 @@
 [data-theme="dark"] .branch-name { color: #b3e2f2; }
 [data-theme="dark"] .branch-desc { color: #8db0c0; }
 
+/* ============================================================
+   Мобильная адаптация
+   ============================================================ */
 @media (max-width: 480px) {
-  .chapter-card { padding: 1rem; border-radius: 1rem; }
+  .chapter-card { padding: 1rem; }
   .subsection-tag {
     white-space: normal;
-    word-break: keep-all;
     font-size: 0.65rem;
     padding: 0.2rem 0.6rem;
   }
   .chapter-title { font-size: 1.1rem; }
+}
+
+
+
+
+[data-theme="light"] .chapter-card-1,
+:root:not([data-theme="dark"]) .chapter-card-1 {
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #ffffff3d;
+  border: 1px solid #091d27;
+}
+
+[data-theme="dark"] .chapter-card-1 {
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #03283b29;
+  border: 1px solid #091d27;
+}
+
+
+
+
+[data-theme="light"] .chapter-card-4,
+:root:not([data-theme="dark"]) .chapter-card-4 {
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #ff00002d;
+  border: 1px solid #702a01;
+}
+
+[data-theme="dark"] .chapter-card-4 {
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #90350140;
+  border: 1px solid #702a01;
 }

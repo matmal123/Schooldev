@@ -241,3 +241,147 @@
     linear-gradient(90deg,
       #0d2a3f 0%, #0a2436 24%, #0c2a3a 50%, #0a2436 76%, #0d2a3f 100%);
 }
+
+
+
+.course-4 {
+  --roadmap-surface: rgba(255, 255, 255, 0.88);
+  --roadmap-text: #0e2a3a;
+  --roadmap-muted: #5b7a8c;
+  --roadmap-border: rgba(45, 150, 190, 0.18);
+  --roadmap-accent: #0ea5e9;
+  --roadmap-accent-soft: rgba(14, 165, 233, 0.1);
+
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--roadmap-text);
+
+  /* === СВЕТЛАЯ ТЕМА: HTML (оранж) + CSS (синий) + JS (жёлтый) === */
+  background:
+    /* оранжевый — HTML, левый верх */
+    radial-gradient(ellipse 70% 90% at 0% 20%,
+      rgba(251, 146, 60, 0.35) 0%,
+      rgba(249, 115, 22, 0.15) 40%,
+      transparent 72%),
+    /* голубой — CSS, правый верх */
+    radial-gradient(ellipse 70% 90% at 100% 15%,
+      rgba(56, 189, 248, 0.32) 0%,
+      rgba(14, 165, 233, 0.12) 42%,
+      transparent 75%),
+    /* жёлтый — JS, низ по центру */
+    radial-gradient(ellipse 65% 70% at 50% 100%,
+      rgba(250, 204, 21, 0.28) 0%,
+      rgba(234, 179, 8, 0.1) 45%,
+      transparent 78%),
+    /* бирюзовый блик сверху */
+    radial-gradient(ellipse 60% 55% at 55% 0%,
+      rgba(45, 212, 191, 0.18) 0%,
+      transparent 72%),
+    /* базовый мягкий фон */
+    linear-gradient(135deg,
+      #fff4e8 0%,
+      #e8f6ff 38%,
+      #e6fbf6 65%,
+      #fff8e1 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* ---------- Тёмная тема ---------- */
+[data-theme="dark"] .course-4 {
+  --roadmap-surface: rgba(12, 34, 46, 0.88);
+  --roadmap-text: #e6f7ff;
+  --roadmap-muted: #8fb8c9;
+  --roadmap-border: rgba(56, 189, 248, 0.18);
+  --roadmap-accent: #38bdf8;
+  --roadmap-accent-soft: rgba(45, 212, 191, 0.16);
+
+  background-color: #0a1520;
+  background-image:
+    /* оранжевый — HTML */
+    radial-gradient(ellipse 65% 85% at 0% 15%,
+      rgba(249, 115, 22, 0.38) 0%,
+      rgba(194, 65, 12, 0.14) 40%,
+      transparent 72%),
+    /* голубой — CSS */
+    radial-gradient(ellipse 65% 85% at 100% 20%,
+      rgba(56, 189, 248, 0.40) 0%,
+      rgba(2, 132, 199, 0.16) 40%,
+      transparent 72%),
+    /* жёлтый — JS */
+    radial-gradient(ellipse 60% 60% at 50% 105%,
+      rgba(250, 204, 21, 0.22) 0%,
+      rgba(202, 138, 4, 0.10) 45%,
+      transparent 78%),
+    /* бирюзовый блик сверху */
+    radial-gradient(ellipse 55% 55% at 50% 0%,
+      rgba(45, 212, 191, 0.18) 0%,
+      transparent 72%),
+    /* база: тёмный синий «редактор кода» */
+    linear-gradient(135deg,
+      #071018 0%,
+      #0b1e2e 40%,
+      #0d2733 70%,
+      #1a0f08 100%);
+} 
+
+
+[data-theme="light"] .header-roadmap-1 {
+  background: #0088ff00;
+  
+  animation: headerBg linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
+}
+
+@keyframes headerBg {
+  from { background-color: #0088ff00; }
+  to   { background-color: #7dd6ff; }
+}
+
+[data-theme="dark"] .header-roadmap-1 {
+  background: #0088ff00;
+  
+  animation: headerBgDark linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
+}
+
+@keyframes headerBgDark {
+  from { background-color: #0088ff00; }
+  to   { background-color: #0d2733; }
+}
+
+
+
+[data-theme="light"] .header-roadmap-4 {
+  background: #0088ff00;
+  
+  animation: headerBg linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
+}
+
+@keyframes headerBg {
+  from { background-color: #0088ff00; }
+  to   { background-color: #ffb187; }
+}
+
+[data-theme="dark"] .header-roadmap-4 {
+  background: #0088ff00;
+  
+  animation: headerBgDark linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
+}
+
+@keyframes headerBgDark {
+  from { background-color: #0088ff00; }
+  to   { background-color: #3b271c; }
+}
+
+

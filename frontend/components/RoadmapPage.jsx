@@ -242,7 +242,7 @@ function RoadmapPage({ user, onLogout }) {
   return (
     <div className={`course-${courseId}`}>
       {/* Header - такой же как в CoursePage для единообразия */}
-      <header className="dashboard-header">
+      <header className={`dashboard-header header-roadmap-${courseId}`}>
         <div className="header-content">
           <button className="top-menu-button logo-btn" onClick={handleBackToDashboard}>
             <img src={theme === 'light' ? logoIcon : logoLightIcon} alt="" />
