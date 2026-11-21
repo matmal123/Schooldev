@@ -15,7 +15,7 @@ const ChapterCard = ({ chapter, pageId }) => {
   return (
     <div className={`chapter-card chapter-card-${pageId}`} onClick={handleQuiz1}>
       <div className="card-header">
-        <span className="chapter-number">{number}</span>
+        <span className={`chapter-number chapter-number-${pageId}`}>{number}</span>
         <h3 className="chapter-title">{title}</h3>
       </div>
 
@@ -29,7 +29,7 @@ const ChapterCard = ({ chapter, pageId }) => {
         </div>
         <div className="subsections-list">
           {subsections.map((sub, idx) => (
-            <span key={idx} className="subsection-tag">{sub}</span>
+            <span key={idx} className={`subsection-tag  subsection-tag-${pageId}`}>{sub}</span>
           ))}
         </div>
       </div>

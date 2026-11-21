@@ -139,24 +139,31 @@
 /* ============================================================
    Светлая тема
    ============================================================ */
-[data-theme="light"] .chapter-card,
-:root:not([data-theme="dark"]) .chapter-card {
+[data-theme="light"] .chapter-card-1,
+:root:not([data-theme="dark"]) .chapter-card-1 {
   background: #ffffff;
-  border: 1px solid #033b56;
+  border: 1px solid #00aaff;
 }
 
 @media (hover: hover) {
-  [data-theme="light"] .chapter-card:hover,
-  :root:not([data-theme="dark"]) .chapter-card:hover {
-    border-color: #0a5a7f;
+  [data-theme="light"] .chapter-card-1:hover,
+  :root:not([data-theme="dark"]) .chapter-card-1:hover {
+    border-color: #00a5b1;
   }
 }
 
-[data-theme="light"] .chapter-number,
-:root:not([data-theme="dark"]) .chapter-number {
-  background: #e3f0f5;
+[data-theme="light"] .chapter-number-1,
+:root:not([data-theme="dark"]) .chapter-number-1 {
   color: #1a6075;
 }
+
+[data-theme="dark"] .chapter-number-4{
+  color: #ffb070;
+  background: #7128035a;
+  border: #e45400;
+}
+
+
 
 [data-theme="light"] .chapter-title,
 :root:not([data-theme="dark"]) .chapter-title {
@@ -174,12 +181,6 @@
   color: #548d9e;
 }
 
-[data-theme="light"] .subsection-tag,
-:root:not([data-theme="dark"]) .subsection-tag {
-  background: #f0f6fa;
-  color: #1a657b;
-  border: 1px solid #dcecf4;
-}
 
 [data-theme="light"] .branches-toggle,
 :root:not([data-theme="dark"]) .branches-toggle {
@@ -202,6 +203,7 @@
   color: #568292;
 }
 
+
 /* ============================================================
    Тёмная тема
    ============================================================ */
@@ -210,18 +212,18 @@
 /* ============================================================
    Цвет для карточек для тёмной темы
    ============================================================ */
-   [data-theme="dark"] .chapter-card {
+   [data-theme="dark"] .chapter-card-1 {
   background: #1e1e2e;
-  border: 1px solid #8b5cf6;
+  border: 1px solid #0073ff;
 }
 
 @media (hover: hover) {
-  [data-theme="dark"] .chapter-card:hover {
-    border-color: #a78bfa;
+  [data-theme="dark"] .chapter-card-1:hover {
+    border-color: #0073ff;
   }
 }
 
-[data-theme="dark"] .chapter-number {
+[data-theme="dark"] .chapter-number-1 {
   background: #2a3f5f;
   color: #8bcbd9;
 }
@@ -235,11 +237,20 @@
 
 [data-theme="dark"] .section-label { color: #79b8ce; }
 
-[data-theme="dark"] .subsection-tag {
+[data-theme="dark"] .subsection-tag-1 {
   background: #0f2a33;
-  color: #8dc9dd;
+  color: #147fa3;
   border: 1px solid #2d5f72;
 }
+
+[data-theme="dark"] .subsection-tag-4 {
+  background: #502502;
+  color: #de6e0c;
+  border: 1px solid #833e05;
+}
+
+
+
 
 [data-theme="dark"] .branches-toggle { color: #7eb6ca; }
 
@@ -270,7 +281,7 @@
 [data-theme="light"] .chapter-card-1,
 :root:not([data-theme="dark"]) .chapter-card-1 {
   backdrop-filter: blur(14px) saturate(160%);
-  background: #ffffff3d;
+  background: #73e7fe3d;
   border: 1px solid #091d27;
 }
 
@@ -283,15 +294,37 @@
 
 
 
-[data-theme="light"] .chapter-card-4,
-:root:not([data-theme="dark"]) .chapter-card-4 {
+
+
+[data-theme="light"] .chapter-card-4{
   backdrop-filter: blur(14px) saturate(160%);
-  background: #ff00002d;
+  background: #f5ae7f2d;
   border: 1px solid #702a01;
 }
 
-[data-theme="dark"] .chapter-card-4 {
+[data-theme="light"] .chapter-card-4:hover{
   backdrop-filter: blur(14px) saturate(160%);
-  background: #90350140;
+  background: #00ff1e2d;
   border: 1px solid #702a01;
 }
+
+
+
+
+
+
+
+[data-theme="dark"] .chapter-card-4{
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #724a3386;
+  border: 1px solid #46240f;
+}
+
+
+[data-theme="dark"] .chapter-card-4:hover{
+  backdrop-filter: blur(14px) saturate(160%);
+  background: #733f2186;
+  border: 1px solid rgb(83, 37, 11);
+}
+
+

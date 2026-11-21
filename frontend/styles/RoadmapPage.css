@@ -359,7 +359,7 @@
 
 
 [data-theme="light"] .header-roadmap-4 {
-  background: #d900ff;
+  background: #ffebd7;
   
   animation: headerBgLite4 linear both;
   animation-timeline: scroll(root);
