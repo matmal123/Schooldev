@@ -8,6 +8,7 @@ import logoIcon from '@public/logo.svg'
 import logoLightIcon from '@public/logo-light.svg'
 import '@styles/App.css';
 import '@styles/CoursePage.css';
+import reactLogo from '@public/react-logo.webp'
 
 function CoursePage({ user, onLogout }) {
     const { theme, toggleTheme } = useTheme();
@@ -22,7 +23,7 @@ function CoursePage({ user, onLogout }) {
         1: {
             id: 1,
             title: "React для начинающих",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png",
+            image: reactLogo,
             description: "Изучите основы React: компоненты, хуки, состояние и пропсы. Научитесь создавать динамические веб-приложения с нуля.",
             fullDescription: "Полный курс по React для начинающих разработчиков. Вы научитесь создавать современные веб-приложения, использовать хуки, работать с состоянием и пропсами, а также освоите маршрутизацию и управление состоянием.",
             lessons: [
@@ -39,7 +40,7 @@ function CoursePage({ user, onLogout }) {
         2: {
             id: 2,
             title: "Unity",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s",
+            image: reactLogo,
             description: "Углубленный курс по современному JavaScript: асинхронность, замыкания, прототипы, промисы и новые возможности ES2024.",
             fullDescription: "Продвинутый курс по JavaScript, который превратит вас в эксперта. Изучите замыкания, прототипное наследование, асинхронное программирование, промисы, async/await и все новые возможности ES2024.",
             lessons: [
