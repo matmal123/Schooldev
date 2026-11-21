@@ -333,12 +333,12 @@
 [data-theme="light"] .header-roadmap-1 {
   background: #0088ff00;
   
-  animation: headerBg linear both;
+  animation: headerBgLite1 linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
 }
 
-@keyframes headerBg {
+@keyframes headerBgLite1 {
   from { background-color: #0088ff00; }
   to   { background-color: #7dd6ff; }
 }
@@ -346,42 +346,42 @@
 [data-theme="dark"] .header-roadmap-1 {
   background: #0088ff00;
   
-  animation: headerBgDark linear both;
+  animation: headerBgDark1 linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
 }
 
-@keyframes headerBgDark {
+@keyframes headerBgDark1 {
   from { background-color: #0088ff00; }
-  to   { background-color: #0d2733; }
+  to   { background-color: #053c56; }
 }
 
 
 
 [data-theme="light"] .header-roadmap-4 {
-  background: #0088ff00;
+  background: #d900ff;
   
-  animation: headerBg linear both;
+  animation: headerBgLite4 linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
 }
 
-@keyframes headerBg {
+@keyframes headerBgLite4 {
   from { background-color: #0088ff00; }
-  to   { background-color: #ffb187; }
+  to   { background-color: #f2e4d4; }
 }
 
 [data-theme="dark"] .header-roadmap-4 {
   background: #0088ff00;
   
-  animation: headerBgDark linear both;
+  animation: headerBgDark4 linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px; /* за первые 200px скролла цвет проявится */
 }
 
-@keyframes headerBgDark {
+@keyframes headerBgDark4 {
   from { background-color: #0088ff00; }
-  to   { background-color: #3b271c; }
+  to   { background-color: #020e25; }
 }
 
 
